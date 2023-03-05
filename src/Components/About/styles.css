@@ -1,0 +1,67 @@
+/* .header-nav {
+  background-color: #165cb3b3;
+  top:0;
+  /* color: white;
+  display: block;
+  position: absolute;
+  top:0;
+  height: 50px;
+  width: 100%; */
+
+/* If we set width to any element we cannot center element using text-align : center to do
+
+that we can use 
+i.e if set width to that element 
+ex. 
+width : 10%
+margin: 0 auto 0 auto    // if we are centering horizontally
+*/
+
+hr {
+  border-style: none;
+  margin: 30px auto;
+  border-bottom-style: dotted;
+  width: 10%;
+  border-width: 8px;
+  color: #ffffff41;
+}
+
+.profile {
+  margin: 0 auto;
+  width: 50%;
+  text-align: start;
+}
+.profile p {
+  font-weight: 100;
+  line-height: 1.5;
+
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.skill-row {
+  /* width: 50%; */
+  text-align: center;
+  font-size: 0.5rem;
+  margin: 10px auto;
+  vertical-align: middle;
+}
+.skill-row h2{
+  font-weight: 300;
+  font-size: 1rem;
+  color: rgb(9, 211, 211);
+}
+
+/* middlecontainer  */
+
+.middle-container {
+  text-align: center;
+}
+/* .middle-container h4 {
+    margin: 0 auto;
+    width: 51%;
+    line-height: 2;
+  } */

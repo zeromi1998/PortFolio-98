@@ -1,0 +1,17 @@
+nav{
+  margin: 15px 8%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.navbar-list{
+  display: inline;
+  padding: 0 25px;
+  font-weight: 900;
+    background-color: red;
+    background-image: linear-gradient(45deg, #ac099e, #0ceeee);
+      -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
