@@ -1,105 +1,141 @@
 import * as React from "react";
 import "./styles.css";
-import Timeline from "@mui/lab/Timeline";
-import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
-import TimelineDot from "@mui/lab/TimelineDot";
-import Typography from "@mui/material/Typography";
-import LaptopMacIcon from "@mui/icons-material/LaptopMac";
-export default function TimelineBar() {
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+const Timeline = () => {
+  const experienceObj = [
+    {
+      date: "March 2022-Jan 2023",
+      companyName: "Sworks.io",
+      position: "Software Engineer",
+      location: "Pune,MH",
+      workDetails: [
+        "Responsible for developing web-based applications based on client requirements using React.js using Typescript.",
+        "worked on the backend for the dashboard of the product sRide using Node.js (Express.js) developed REST API for admin dashboard for various clients by using specific database configurations using Node.js",
+        "worked on an E-commerce wine web application written API and did integration on web site Also, did deployment of the backend server to the AWS EC2 instance",
+        "worked on a storybook for creating various react components and doing CI/CD and publishing the package of that particular component using GIT for the reusability of components in future projects",
+      ],
+    },
+    {
+      date: "Dec 2020 - March 2022",
+      companyName: "Byny Technology",
+      position: "Associate Trainee",
+      location: "Pune,MH",
+      workDetails: [
+        "Responsible for developing smart360 field force appointment app using flutter and integrated API.",
+        "Successfully completed field force marketing module, consumer  survey, location survey, and campaign UI",
+      ],
+    },
+  ];
   return (
     <>
-      <h2 className="skill-head">Work Experience</h2>
-      <Timeline position="">
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: "auto 0" }}
-            align="right"
-            variant="body2"
-            color="text.white"
-          >
-            March 2022-Jan 2023
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary">
-              <LaptopMacIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "12px", px: 2 }}>
-            <Typography className="typographyHeading" variant="h6" component="span">
-              Sworks.io
-            </Typography>
-            <Typography className="typography" >Software Engineer</Typography>
-            {/* <ul>
-              <li>
-                Responsible for developing web-based applications based on
-                client requirements using React.js using Typescript.
-              </li>
-              <li>
-                worked on the backend for the dashboard of the product sRide
-                using Node.js (Express.js) developed REST API for admin
-                dashboard for various clients by using specific database
-                configurations using Node.js
-              </li>
-
-              <li>
-                worked on an E-commerce wine web application written API and did
-                integration on web site Also, did deployment of the backend
-                server to the AWS EC2 instance
-              </li>
-              <li>
-                worked on a storybook for creating various react components and
-                doing CI/CD and publishing the package of that particular
-                component using GIT for the reusability of components in future
-                projects
-              </li>
-            </ul> */}
-            <Typography className="typography" >Technology:  React.js,Node.js,Express.js,Nest.js,Git</Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: "auto 0" }}
-            variant="body2"
-            align="right"
-            color="text.white"
-          >
-            Dec 2020 - March 2022
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary">
-              <LaptopMacIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "12px", px: 2 }}>
-            <Typography className="typographyHeading" variant="h6" component="span">
-              Byny Technology
-            </Typography>
-            <Typography  className="typography" variant="ul" component="li">
-              Associate Trainee
-            </Typography>
-            {/* <ul>
-              <li>
-                Responsible for developing smart360 field force appointment app
-                using flutter and integrated API.
-              </li>
-              <li>
-                Successfully completed field force marketing module, consumer
-                survey, location survey, and campaign UI
-              </li>
-            </ul> */}
-            <Typography className="typography"  component="p">Technology: Flutter , Dart</Typography>
-          </TimelineContent>
-        </TimelineItem>
-      </Timeline>
-      <hr/>
+      <VerticalTimeline>
+        {experienceObj.map((data) => {
+          return (
+            <>
+              <VerticalTimelineElement
+                contentStyle={{
+                  background: "rgba(184, 178, 178, 0.11)",
+                  color: "#fff",
+                }}
+                className="vertical-timeline-element--work"
+                date={data.date}
+                iconStyle={{ background: "rgb(33, 150, 243)", color: "#000",   }}
+                // icon={<WorkIcon />}
+              >
+                <h3 className="timeline-head">
+                  {data.companyName}
+                </h3>
+                <h3 className="vertical-timeline-element-title">
+                  {" "}
+                  {data.position}
+                </h3>
+                <h4 className="vertical-timeline-element-subtitle ">
+                  {data.location}
+                </h4>
+                {data.workDetails.map((data) => {
+                  return (
+                    <ul className="Timeline-list">
+                      <li>{data}</li>
+                    </ul>
+                  );
+                })}
+              </VerticalTimelineElement>
+            </>
+          );
+        })}
+        {/* <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{
+            background: "rgba(184, 178, 178, 0.11)",
+            color: "#fff",
+          }}
+          contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
+          date="March 2022-Jan 2023"
+          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+          // icon={<WorkIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">Sworks.io</h3>
+          <h3 className="vertical-timeline-element-title">Software Engineer</h3>
+          <h4 className="vertical-timeline-element-subtitle">Pune,MH.</h4>
+          <ul className="timeline-list">
+            <li>
+              Responsible for developing web-based applications based on client
+              requirements using React.js using Typescript.
+            </li>
+            <li>
+              worked on the backend for the dashboard of the product sRide using
+              Node.js (Express.js) developed REST API for admin dashboard for
+              various clients by using specific database configurations using
+              Node.js
+            </li>
+            <li>
+              worked on an E-commerce wine web application written API and did
+              integration on web site Also, did deployment of the backend server
+              to the AWS EC2 instance
+            </li>
+            <li>
+              worked on a storybook for creating various react components and
+              doing CI/CD and publishing the package of that particular
+              component using GIT for the reusability of components in future
+              projects
+            </li>
+          </ul>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          contentStyle={{
+            background: "rgba(184, 178, 178, 0.11)",
+            color: "#fff",
+          }}
+          className="vertical-timeline-element--work"
+          date="Dec 2020 - March 2022"
+          iconStyle={{ background: "rgb(33, 150, 243)", color: "#000" }}
+          // icon={<WorkIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">Byny Technology</h3>
+          <h3 className="vertical-timeline-element-title">
+            {" "}
+            Associate Trainee
+          </h3>
+          <h4 className="vertical-timeline-element-subtitle">Pune,MH.</h4>
+          <ul className="Timeline-list">
+            <li>
+              Responsible for developing smart360 field force appointment app
+              using flutter and integrated API.
+            </li>
+            <li>
+              Successfully completed field force marketing module, consumer
+              survey, location survey, and campaign UI
+            </li>
+          </ul>
+        </VerticalTimelineElement> */}
+      </VerticalTimeline>
+      <hr />
     </>
   );
-}
+};
+
+export default Timeline;

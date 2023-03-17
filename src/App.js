@@ -1,6 +1,6 @@
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
-import TimelineBar  from "./Components/Timline/Timeline";
+import Timeline  from "./Components/Timline/Timeline";
 import "./styles.css";
 import { Route, Routes } from "react-router-dom";
 import SignIn from "./Components/SignIn/SignIn";
@@ -13,7 +13,7 @@ function App() {
       <Home />
       <About />
       <Projects/>
-      <TimelineBar/>
+      <Timeline/>
       <Footer/>
 
       {/* <Routes>

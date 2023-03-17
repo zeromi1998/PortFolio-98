@@ -1,21 +1,4 @@
-/* .header-nav {
-  background-color: #165cb3b3;
-  top:0;
-  /* color: white;
-  display: block;
-  position: absolute;
-  top:0;
-  height: 50px;
-  width: 100%; */
 
-/* If we set width to any element we cannot center element using text-align : center to do
-
-that we can use 
-i.e if set width to that element 
-ex. 
-width : 10%
-margin: 0 auto 0 auto    // if we are centering horizontally
-*/
 
 hr {
   border-style: none;
@@ -27,35 +10,121 @@ hr {
 }
 
 .middle-image-right {
-  width: 35%;
-  right: 10%;
-  position: absolute;
+  margin-top: -30px;
+  max-width: 480px;
+
 }
 
 .heading-cont {
-  width: 40%;
   text-align: start;
-  left: 10%;
-  top:20%;
+padding-left: 80px;
   /* margin-right: 69px; */
-  position: absolute;
+}
+
+
+
+.grid-container{
+margin-top: 30px;
+  display: grid;
+  grid-template-columns: 0.9fr 0.9fr;
 }
 
 .heading-cont h4 {
   font-weight: 100;
   line-height: 2;
 }
-
 .heading-cont h1 {
   margin: 0;
+  /* color: transparent;   uncomment this to get text color animtion */
   font-size: 3rem;
+  animation: effect 2s linear infinite;
 }
+
+/* @keyframes effect {
+  0% {
+      background: linear-gradient(
+              #008000, #00FF00);
+      -webkit-background-clip: text;
+  }
+
+  100% {
+      background: linear-gradient(
+              #3CE7D7, #000FFF);
+      -webkit-background-clip: text;
+  }
+} */
+
+
+
+/* .grid-item{
+  background-image: url("/src/assets/air.png");
+  width: 80%;
+} */
 
 .top-container {
   /* display: inline-block; */
   padding-top: 80px;
-  height: 100vh;
   /* background-color: #ff7b54; */
   text-align: center;
   position: relative;
+}
+
+
+
+@media only screen and (max-width:995px){
+  .middle-image-right {
+    margin-top: -30px;
+    max-width: 400px;
+  
+  }
+  .grid-container{
+    margin-top: 30px;
+      display: grid;
+      column-gap: 20px;
+      grid-template-columns: 1.5fr 0.9fr;
+    }
+}
+
+@media only screen and (max-width:925px){
+  .middle-image-right {
+    margin-top: -30px;
+    max-width: 300px;
+  
+  }
+  .grid-container{
+    margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1.5fr 0.9fr;
+    }
+
+    .heading-cont h4 {
+      font-weight: 100;
+      line-height: 2;
+    }
+    .heading-cont h1 {
+      margin: 0;
+      /* color: transparent;   uncomment this to get text color animtion */
+      font-size: 2rem;
+      animation: effect 2s linear infinite;
+    }
+}
+
+@media only screen and (max-width: 825px){
+  .grid-container{
+    margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .heading-cont {
+      text-align: start;
+      padding:0 50px;
+    
+      /* margin-right: 69px; */
+    }
+    
+    .middle-image-right {
+      margin-top: 30px;
+      max-width: 320px;
+    
+    }
 }

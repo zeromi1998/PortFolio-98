@@ -24,28 +24,32 @@ const Home = () => {
     { indx: 5, name: "Git", pic: gitImg },
   ];
   return (
-   <>
-    <div className="top-container">
-      <Navbar/>
-    {/* <img  className="top-image" src={airImg} alt="airImage"/> */}
-    <div className="heading-cont">
-      <h3>Hello my name is ,</h3>
-      <h1>Prathamesh Doshi.</h1>
-      <h4>
-        A passionate developer with a love for learning new technologies. I
-        have a strong skillset in React.js, Node.js, HTML, and CSS, and I
-        enjoy using my knowledge to bring new ideas to life.
-      </h4>
-    </div>
+    <>
+      <div className="top-container">
+        <Navbar />
+        {/* <img  className="top-image" src={airImg} alt="airImage"/> */}
 
-    {/* <img className="middle-image" src={techImg} alt="tectImage" /> */}
-    <img className="middle-image-right" src={airImg} alt="airImg" />
-    {/* <img className="bottom-image" src={mountainImg} alt="mountain" /> */}
-  </div>
-  <hr />
-   </>
+        <div class="grid-container">
+          <div class="heading-cont ">
+            {" "}
+            <h3>Hello my name is ,</h3>
+            <h1>Prathamesh Doshi.</h1>
+            <h4>
+              A passionate developer with a love for learning new technologies.
+              I have a strong skillset in React.js, Node.js, HTML, and CSS, and
+              I enjoy using my knowledge to bring new ideas to life.
+            </h4>
+          </div>
+          <div class="grid-item">
+            {" "}
+            <img className="middle-image-right" src={airImg} alt="airImg" />
+          </div>
+        </div>
+        {/* <img className="bottom-image" src={mountainImg} alt="mountain" /> */}
+      </div>
+      <hr />
+    </>
   );
 };
-
 
 export default Home;
