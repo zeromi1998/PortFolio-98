@@ -161,6 +161,11 @@
 
 /* Custome Styes */
 
+.xper-head{
+  text-align: center;
+  margin: 40px;
+}
+
 
 .Timeline-list {
   font-size: 0.85rem;

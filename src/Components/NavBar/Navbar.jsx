@@ -1,37 +1,52 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { HashLink } from "react-router-hash-link";
 import "./styles.css";
-import mountainImg from "../../assets/mountain.svg";
-import airImg from "../../assets/air.png";
-import techImg from "../../assets/tech.svg";
-import profileImg from "../../assets/profile.jpg";
-import TimelineBar from "../Timline/Timeline";
-import javascriptImg from "../../assets/javascript.svg";
-import reactImg from "../../assets/reactjs.png";
-import nodeImg from "../../assets/nodejs.svg";
-import pythonImg from "../../assets/python.svg";
-import linuxImg from "../../assets/linux.png";
-import gitImg from "../../assets/git.svg";
+import { FaHamburger, FaArrowRight } from "react-icons/fa";
 
 const Navbar = () => {
   const navObj = [
-    { indx: 0, name: "About", path:"" },
-    { indx: 1, name: "Experince", path:"" },
-    { indx: 2, name: "Project", path:"" },
-    { indx: 0, name: "Contact", path:"" },
+    { indx: 0, name: "About", path: "/#about" },
+    { indx: 1, name: "Experince", path: "/#experience" },
+    { indx: 2, name: "Project", path: "/#projects" },
+    { indx: 3, name: "Contact", path: "/#contact" },
+    { indx: 4, name: "", path: "" },
   ];
   // *******************  Imp after designing websiet create new array of object amd your skill
   // *****     and use map to display data instead of using same component
+
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  const handleShowNavbar = () => {
+    setShowNavbar(true);
+  };
+
+  const closeSidenavbar = () => {
+    setShowNavbar(false);
+  };
   return (
     <>
-     <nav>
-      <ul>
-        {navObj.map((data)=>{
-          return (
-            <li className="navbar-list">{data.name}</li>
-          )
-        })}
-      </ul>
+      <nav className="navbar">
+        <div className="container">
+          <div className="logo"></div>
+          <div className="menu-icon" onClick={handleShowNavbar}>
+            <FaHamburger />
+          </div>
+          <div className={`nav-elements  ${showNavbar && "active"}`}>
+            <div className="showback">
+              <FaArrowRight onClick={closeSidenavbar} />
+            </div>
+            <ul>
+              {navObj.map((data) => {
+                // console.log("this si naabr data",data)
+                return (
+                  <li key={data.indx}>
+                    <HashLink  smooth to={data.path}>{data.name}</HashLink>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
       </nav>
     </>
   );

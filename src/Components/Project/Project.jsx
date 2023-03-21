@@ -24,9 +24,9 @@ const Projects = () => {
     },
   ];
   return (
-    <>
+    <div id="projects">
     <h2 className="project-header">Projects</h2>
-      <div className="project-tile">
+      <div className="project-tile" >
         {projectObj.map((data) => {
           console.log("data");
           return (
@@ -39,7 +39,7 @@ const Projects = () => {
         })}
       </div>
       <hr />
-    </>
+    </div>
   );
 };
 

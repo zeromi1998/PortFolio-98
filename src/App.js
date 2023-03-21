@@ -1,6 +1,6 @@
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
-import Timeline  from "./Components/Timline/Timeline";
+import Timeline from "./Components/Timline/Timeline";
 import "./styles.css";
 import { Route, Routes } from "react-router-dom";
 import SignIn from "./Components/SignIn/SignIn";
@@ -12,14 +12,13 @@ function App() {
     <>
       <Home />
       <About />
-      <Projects/>
-      <Timeline/>
-      <Footer/>
+      <Projects />
+      <Timeline />
+      <Footer />
 
       {/* <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/signin" element={<SignIn />} />
-
+        <Route path="/experince" element={<Timeline />} />
       </Routes> */}
     </>
   );

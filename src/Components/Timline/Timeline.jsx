@@ -21,7 +21,7 @@ const Timeline = () => {
     },
     {
       date: "Dec 2020 - March 2022",
-      companyName: "Byny Technology",
+      companyName: "Bynry Technology",
       position: "Associate Trainee",
       location: "Pune,MH",
       workDetails: [
@@ -31,7 +31,8 @@ const Timeline = () => {
     },
   ];
   return (
-    <>
+    <div id="experience">
+      <h2 className="xper-head">Experience</h2>
       <VerticalTimeline>
         {experienceObj.map((data) => {
           return (
@@ -43,12 +44,10 @@ const Timeline = () => {
                 }}
                 className="vertical-timeline-element--work"
                 date={data.date}
-                iconStyle={{ background: "rgb(33, 150, 243)", color: "#000",   }}
+                iconStyle={{ background: "rgb(33, 150, 243)", color: "#000" }}
                 // icon={<WorkIcon />}
               >
-                <h3 className="timeline-head">
-                  {data.companyName}
-                </h3>
+                <h3 className="timeline-head">{data.companyName}</h3>
                 <h3 className="vertical-timeline-element-title">
                   {" "}
                   {data.position}
@@ -134,7 +133,7 @@ const Timeline = () => {
         </VerticalTimelineElement> */}
       </VerticalTimeline>
       <hr />
-    </>
+    </div>
   );
 };
 

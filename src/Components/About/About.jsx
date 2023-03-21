@@ -19,7 +19,7 @@ const About = () => {
   ];
   return (
     <>
-      <div className="middle-container">
+      <div className="middle-container" id="about">
         <div className="profile">
           {/* <img className="round-img" src={profileImg} alt="profile" /> */}
           <h2>About Me</h2>
