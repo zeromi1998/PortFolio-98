@@ -1,27 +1,62 @@
+
+@use postcss-preset-env {
+  stage: 0;
+}
+
+:root {
+  --color-background: #000;
+  --stroke-width: calc(1em / 16);
+  --font-size: 4vmin;
+  --font-weight: 700;
+  --letter-spacing: calc(1em / 8);
+}
+
+
+
+
+.logo h1 {
+  background-clip: text;
+  background-image: linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f);
+/*   color: var(--color-background); */
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  letter-spacing: var(--letter-spacing);
+  padding: calc(--stroke-width / 2);
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: var(--stroke-width);
+}
+
+
+
 .container {
-  max-width: 1100px;
+  /* max-width: 1100px; */
   margin: 0 auto;
   padding: 0 15px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   height: 100%;
 }
 .showback {
+  width: 0;
+  height: 0;
   visibility: hidden;
 }
 
 .navbar {
+  width: 100%;
   top: 0;
+  z-index: 5;
   height: 60px;
-  /* background-color: #fef7e5; */
-  position: absolute;
+  background-color: hsl(0deg 0% 0% / 95%);
+  position: fixed;
   top: 0;
   right: 0;
-  margin: 5px 2%;
+  /* margin: 5px 2%; */
 }
 
 .logo {
+  margin: auto 0;
 }
 
 .menu-icon {
@@ -29,6 +64,7 @@
 }
 
 .nav-elements {
+  margin: auto 0;
 }
 
 .nav-elements ul {
@@ -64,10 +100,13 @@
     visibility: visible;
     position: absolute;
     right: 0;
-    margin: 20px;
+    margin-top:30px;
+    margin-right: 50px;
     font-size: 2rem;
   }
   .menu-icon {
+    font-size: 2rem;
+    margin: auto 10px;
     display: block;
     cursor: pointer;
   }

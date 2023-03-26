@@ -4,6 +4,7 @@
 .project-tile {
   margin: 20px;
   display: grid;
+  row-gap: 30px;
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -13,11 +14,16 @@
   padding: 20px;
   margin: 2rem;
   max-width: 350px;
-  height: 220px;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  padding: 0.9em;
+  /* height: 220px; */
   background-color: rgba(184, 178, 178, 0.11);
 }
 
 .box-grid h2 {
+  margin: 0;
   font-size: 1.5rem;
   font-weight: 800;
   background-color: rgb(0, 110, 255);
@@ -27,9 +33,24 @@
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
+.box-grid h3 {
+margin:5px 0;
+font-weight: 400;
+}
+
+.gitLogo {
+  align-items: flex-end;
+  display: flex;
+  height: 100%;
+  padding-top: 5px;
+  width: 100%;
+}
 
 .box-grid p {
-  font-weight: 100;
+  margin: 0;
+  line-height: 1.5rem;
+  padding: 5px 0;
+  font-weight: 300;
   color: rgb(6, 170, 182);
 }
 @media only screen and (max-width: 1035px) {
@@ -42,7 +63,7 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1020px) {
   /* .box-grid h2 {
     font-size: 0.9rem;
   }
@@ -54,7 +75,6 @@
     height: 180px;
   } */
 
-  
   .project-tile {
     margin: 20px;
     display: grid;
@@ -73,12 +93,11 @@
  
     height: 180px;
   } */
-  .box-grid{
-    max-width:100%;
+  .box-grid {
+    max-width: 100%;
   }
- 
+
   .project-tile {
-    
     margin: 20px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);

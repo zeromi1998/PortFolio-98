@@ -27,8 +27,10 @@ const About = () => {
             My name is Pathamesh Doshi and I am a software engineer with a
             passion for developing innovative solutions. I have a BE in Computer
             Engineering from Pune University and I am skilled in technologies
-            such as React.js, Node.js, Express.js, Git, Linux, Python, HTML, and
-            CSS.
+            such as {" "} 
+            <span>
+               React.js, Node.js, Express.js, Git, Linux, Python, HTML, CSS.
+            </span>
           </p>
 
           <p>

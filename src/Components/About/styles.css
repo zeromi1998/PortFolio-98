@@ -28,12 +28,21 @@ hr {
 
 .profile {
   margin: 0 auto;
-  width: 50%;
+  width: 60%;
   text-align: start;
 }
 .profile p {
+  font-size: 20px;
   font-weight: 100;
   line-height: 1.5;
+}
+
+.profile span {
+  font-weight: 500;
+  color: rgb(228, 67, 9);
+}
+.profile h2{
+  text-align: center;
 }
 
 .skills {
@@ -49,7 +58,7 @@ hr {
   vertical-align: middle;
 }
 .skill-row h2 {
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1rem;
   color: rgb(9, 211, 211);
 }

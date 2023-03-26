@@ -27,7 +27,9 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <div className="container">
-          <div className="logo"></div>
+          <div className="logo">
+            <h1>Prathamesh</h1>
+          </div>
           <div className="menu-icon" onClick={handleShowNavbar}>
             <FaHamburger />
           </div>
@@ -40,7 +42,9 @@ const Navbar = () => {
                 // console.log("this si naabr data",data)
                 return (
                   <li key={data.indx}>
-                    <HashLink  smooth to={data.path}>{data.name}</HashLink>
+                    <HashLink onClick={closeSidenavbar} smooth to={data.path}>
+                      {data.name}
+                    </HashLink>
                   </li>
                 );
               })}
