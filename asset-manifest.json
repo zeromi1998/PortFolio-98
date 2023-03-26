@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/PortFolio-98/static/css/main.19e2cbd5.css",
+    "main.js": "/PortFolio-98/static/js/main.5220c084.js",
+    "static/media/air.png": "/PortFolio-98/static/media/air.7d2972799c9504ac9cbb.png",
+    "static/media/PrathameshResume.pdf": "/PortFolio-98/static/media/PrathameshResume.6399ac3879fec5ecbccd.pdf",
+    "static/media/nodejs.svg": "/PortFolio-98/static/media/nodejs.cccdafa931eebdaea49f5c5ac3ba232f.svg",
+    "index.html": "/PortFolio-98/index.html",
+    "static/media/python.svg": "/PortFolio-98/static/media/python.026a62687ef705a39cfc755d7457859c.svg",
+    "static/media/javascript.svg": "/PortFolio-98/static/media/javascript.081325c6f229605dce15142ddd948d6d.svg",
+    "static/media/github.svg": "/PortFolio-98/static/media/github.7404e24fb91c3981da3aa7573d8e0a4d.svg",
+    "static/media/git.svg": "/PortFolio-98/static/media/git.43d387b77657117c0e407816cbf72476.svg",
+    "static/media/linkdin.svg": "/PortFolio-98/static/media/linkdin.8762f6e957e5d6c297b9cbc434ecf218.svg",
+    "main.19e2cbd5.css.map": "/PortFolio-98/static/css/main.19e2cbd5.css.map",
+    "main.5220c084.js.map": "/PortFolio-98/static/js/main.5220c084.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.19e2cbd5.css",
+    "static/js/main.5220c084.js"
+  ]
+}
