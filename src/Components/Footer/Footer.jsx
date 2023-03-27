@@ -18,7 +18,7 @@ const Footer = () => {
         {" "}
         <img src={gitHubImg} alt="gitHubImg" />
       </a>
-      <p>2023 Prathamesh Doshi</p>
+      <p>No © copyright issues.</p>
     </div>
   );
 };

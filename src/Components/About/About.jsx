@@ -6,8 +6,6 @@ import pythonImg from "../../assets/python.svg";
 import linuxImg from "../../assets/linux.png";
 import gitImg from "../../assets/git.svg";
 import "./styles.css";
-import gitHubImg from "../../assets/github.svg";
-import linkdinImg from "../../assets/linkdin.svg";
 const About = () => {
   const skillObj = [
     { indx: 0, name: "JavaScript", pic: javascriptImg },

@@ -28,10 +28,9 @@ const Projects = () => {
     <div id="projects">
       <h2 className="project-header">Projects</h2>
       <div className="project-tile">
-        {projectObj.map((data) => {
-          console.log("data");
+        {projectObj.map((data, indx) => {
           return (
-            <div className="box-grid">
+            <div className="box-grid" key={indx}>
               <h2>{data.name}</h2>
               <h3>{data.techStack}</h3>
               <p>{data.desc}</p>
