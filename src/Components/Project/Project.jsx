@@ -14,8 +14,8 @@ const Projects = () => {
       techStack: "React,Node",
     },
     {
-      name: "abc",
-      desc: "about the project",
+      name: "Nodejs Auth Application",
+      desc: "Auth applicatoion for user to login with session management ",
       techStack: "React,Node",
     },
     {
