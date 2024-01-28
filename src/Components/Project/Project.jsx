@@ -1,27 +1,37 @@
 import React from "react";
 import "./styles.css";
 import gitHubImg from "../../assets/github.svg";
+import smoothie from "../../assets/smoothie.jpg";
 const Projects = () => {
+
   const projectObj = [
     {
-      name: "Nodejs Auth Application",
-      desc: "Auth applicatoion for user to login with session management ",
-      techStack: "React,Node",
+      name: "Smoothie Recipes App",
+      desc: "Smoothie Recipes App where you can create  your own recipe and view others created recipe",
+      techStack: "React,Node.js,Typescript",
+      link: "https://smoothie-receipe-app.vercel.app/",
+      img: smoothie,
     },
     {
       name: "Nodejs Auth Application",
       desc: "Auth applicatoion for user to login with session management ",
       techStack: "React,Node",
+      link: "https://github.com/zeromi1998",
+      img: gitHubImg,
     },
     {
       name: "Nodejs Auth Application",
       desc: "Auth applicatoion for user to login with session management ",
       techStack: "React,Node",
+      link: "https://github.com/zeromi1998",
+      img: gitHubImg,
     },
     {
       name: "Nodejs Auth Application",
       desc: "Auth applicatoion for user to login with session management ",
       techStack: "React,Node",
+      link: "https://github.com/zeromi1998",
+      img: gitHubImg,
     },
   ];
   return (
@@ -35,8 +45,8 @@ const Projects = () => {
               <h3>{data.techStack}</h3>
               <p>{data.desc}</p>
               <div className="gitLogo">
-                <a href="https://github.com/zeromi1998" target="_blanck">
-                  <img src={gitHubImg} alt="gitImg" />
+                <a href={data.link} target="_blanck">
+                  <img className="projectImg" src={data.img} alt="projectImg" />
                 </a>
               </div>
             </div>
