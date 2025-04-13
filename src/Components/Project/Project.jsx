@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.css";
 import gitHubImg from "../../assets/github.svg";
 import smoothie from "../../assets/smoothie.jpg";
+import chatImag from "../../assets/chat.png";
 const Projects = () => {
 
   const projectObj = [
@@ -13,26 +14,26 @@ const Projects = () => {
       img: smoothie,
     },
     {
-      name: "Nodejs Auth Application",
-      desc: "Auth applicatoion for user to login with session management ",
+      name: "Chat Applicaton",
+      desc: "Allow you to stay connected with other people who may be using the application even on the other side of the world",
       techStack: "React,Node",
-      link: "https://github.com/zeromi1998",
-      img: gitHubImg,
+      link: "https://chat-app-gules-phi.vercel.app/",
+      img: chatImag,
     },
     {
-      name: "Nodejs Auth Application",
-      desc: "Auth applicatoion for user to login with session management ",
-      techStack: "React,Node",
+      name: "Git",
+      desc: "Git Repository",
+      techStack: "",
       link: "https://github.com/zeromi1998",
       img: gitHubImg,
     },
-    {
-      name: "Nodejs Auth Application",
-      desc: "Auth applicatoion for user to login with session management ",
-      techStack: "React,Node",
-      link: "https://github.com/zeromi1998",
-      img: gitHubImg,
-    },
+    // {
+    //   name: "Nodejs Auth Application",
+    //   desc: "Auth applicatoion for user to login with session management ",
+    //   techStack: "React,Node",
+    //   link: "https://github.com/zeromi1998",
+    //   img: gitHubImg,
+    // },
   ];
   return (
     <div id="projects">

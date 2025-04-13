@@ -8,6 +8,20 @@ import "react-vertical-timeline-component/style.min.css";
 const Timeline = () => {
   const experienceObj = [
     {
+      date: "Jan 2023-Present",
+      companyName: "Tata Consultancy Services",
+      position: "System Engineer",
+      location: "Pune,MH",
+      workDetails: [
+        "Worked on Dynatrace integration in BOB application for storing application logs in Dynatrace and fetching logs to BOB application",
+        "Worked on new feature for Discovery Plus where user should be able to search customer profile by mobile number Displayed customer details on customer page in BOB application",
+        "Fixed bugs present in application",
+        "Refactored code to improve application performance",
+        "Collaborated with the client to identify and implement new features",
+        "Used React.js and Nest.js",
+      ],
+    },
+    {
       date: "March 2022-Jan 2023",
       companyName: "Sworks.io",
       position: "Software Engineer",

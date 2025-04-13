@@ -6,7 +6,7 @@ import { FaHamburger, FaArrowRight } from "react-icons/fa";
 const Navbar = () => {
   const navObj = [
     { indx: 0, name: "About", path: "/#about" },
-    { indx: 1, name: "Experince", path: "/#experience" },
+    { indx: 1, name: "Experience", path: "/#experience" },
     { indx: 2, name: "Project", path: "/#projects" },
     { indx: 3, name: "Contact", path: "/#contact" },
     { indx: 4, name: "", path: "" },
